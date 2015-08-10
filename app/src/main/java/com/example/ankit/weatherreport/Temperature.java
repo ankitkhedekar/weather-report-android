@@ -11,6 +11,9 @@ public class Temperature extends SugarRecord<Temperature>{
     protected String temp;
     protected Long ts;
 
+    public Temperature(){
+
+    }
     public Temperature (String temp, Long ts){
        this.temp = temp;
        this.ts = ts;

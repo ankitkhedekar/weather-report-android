@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="80dp"
+    android:layout_height="wrap_content"
     android:padding="10dp">
 
 
@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:id="@+id/timestamp"
-        android:textSize="35dp" />
+        android:textSize="20dp"/>
 
 
     <TextView
@@ -18,6 +18,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:id="@+id/temp"
-        android:textSize="30dp" />
+        android:textSize="20dp" />
 
 </RelativeLayout>

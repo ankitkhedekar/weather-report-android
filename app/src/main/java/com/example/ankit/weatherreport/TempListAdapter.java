@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import butterknife.Bind;
@@ -19,6 +20,8 @@ public class TempListAdapter extends ArrayAdapter<Temperature> {
     private Context context;
     private Temperature[] temps;
     int resource;
+    SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+
     public TempListAdapter(Context context, int resource, Temperature[] temps) {
         super(context, resource, temps);
 
@@ -37,7 +40,7 @@ public class TempListAdapter extends ArrayAdapter<Temperature> {
 
         if(t != null){
             holder.temp.setText(t.getTemp());
-            holder.timestamp.setText(new Date(t.getTime()).toString());
+            holder.timestamp.setText(df.format(new Date(t.getTime())));
         }
 
         return v;
